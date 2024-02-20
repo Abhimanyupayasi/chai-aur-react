@@ -29,7 +29,7 @@ function App() {
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
-            backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+            backgroundImage: `url('https://img.freepik.com/premium-vector/financial-business-statistics-with-bar-graph-candlestick-chart-show-effective-earning-background_120819-1052.jpg')`,
         }}
     >
         <div className="w-full">
@@ -45,8 +45,12 @@ function App() {
                         <InputBox
                             label="From"
                             amount={amount}
-                            currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
+                             currencyOptions={options}
+                            
+                            // onCurrencyChange={(currency) => setAmount(amount)}
+                            onCurrencyChange={(currency) => setFrom(currency)}
+                            
+
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
@@ -66,7 +70,9 @@ function App() {
                             amount={convertedAmount}
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
-                            selectCurrency={from}
+
+                            selectCurrency={to}
+                            
                             amountDisable
                         />
                     </div>
